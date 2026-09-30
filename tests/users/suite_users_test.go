@@ -16,6 +16,10 @@ type UsersTestSuite struct {
 	tests.APISuite
 }
 
+func (s *UsersTestSuite) SetupSuite() {
+    s.APISuite.SetupSuite()
+}
+
 func (s *UsersTestSuite) TestCreateUser() {
 	email := fmt.Sprintf(
 		"john-%d@example.com",
